@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+}
+#header{
+  background-color: yellowgreen;
+  padding: 30px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+#logo{
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+nav{
+  text-align: center;
+  width: 75%;
+}
+li{
+  display: inline-block;
+  margin: 10px;
+}
