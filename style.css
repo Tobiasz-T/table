@@ -9,6 +9,8 @@ body{
 }
 #logo{
   width: 25%;
+  display: flex;
+  align-items: center;
 }
 nav{
   text-align: center;
