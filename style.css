@@ -20,3 +20,53 @@ li{
   display: inline-block;
   margin: 10px;
 }
+:root {
+  --bg:#0b1220;
+  --ink:#e7ecf3;
+  --muted:#8fa1b3;
+  --accent:#6ea8fe;
+}
+body {
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  background:var(--bg); color:var(--ink);
+}
+li[role="tab"]{
+  appearance:none;
+  border:1px solid #1f2a3a;
+  background:#111a2b;
+  color:var(--muted);
+  padding:.6rem .9rem; border-radius:999px;
+  cursor:pointer; transition:transform .1s ease, color .2s, border-color .2s;
+}
+li[role="tab"][aria-selected="true"]{
+  color:var(--ink); border-color:var(--accent);
+}
+li[role="tab"]:hover{
+  transform:translateY(-1px);
+}
+main {
+  max-width:900px;
+  margin:2rem auto;
+  padding:0 1rem 3rem;
+}
+section[role="tabpanel"]{
+  display:none;
+  animation:fade .18s ease-out;
+}
+section[role="tabpanel"][data-active="true"]{
+  display:block;
+}
+@keyframes fade{ from{opacity:.6; transform:translateY(2px)} to{opacity:1; transform:none} }
+h2{
+  margin:.2rem 0 1rem;
+}
+p{
+  color:#c4cfdd;
+}
+.card{
+  background:#0f1727;
+  border:1px solid #1f2a3a;
+  padding:1rem;
+  border-radius:14px;
+}
